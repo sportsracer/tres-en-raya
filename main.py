@@ -51,10 +51,6 @@ def is_game_over():
         if all(board[row][column] == player for row, column in [(2, 0), (1, 1), (0, 2)]):
             return player
 
-        # Check the second diagonal
-        if all(board[i][2 - i] == player for i in [0, 1, 2]):
-            return player
-
     # No player has won … let's check if it's a tie
     for row in [0, 1, 2]:
         for column in [0, 1, 2]:
